@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .map {
+            width: 800px;
+            height: 600px;
+            background-color: #ccc;
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- 地图 -->
+    <div class="map" id="map"></div>
+
+</body>
+<script src="./require.js"></script>
+<script>
+    require(['./Food' , './Snake' , './Game'] , function(){
+        //获取地图
+        var map = document.getElementById('map')
+        //创建一个游戏对象
+        var game = new Game(map);
+        //调用这个游戏对象的start方法 , 开始游戏
+        game.start();
+    })
+</script>
+</html>
